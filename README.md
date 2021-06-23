@@ -10,6 +10,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 ```
 
+- https://react-bootstrap.netlify.app/getting-started/introduction/
+
 # wirefrane
 
 layout for shop item (picture, title, descriptions...)

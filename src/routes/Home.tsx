@@ -1,11 +1,12 @@
 import React from 'react';
 import { Jumbotron, Button } from 'react-bootstrap';
-
+import Carousel from '../components/carousel';
 const Home = () => {
   const basicUrl =
     'https://codingapple-shop.s3.ap-northeast-2.amazonaws.com/shopItem/';
   return (
     <div>
+      <Carousel />
       <Jumbotron className="background">
         <h1>20% Season Off</h1>
         <p>

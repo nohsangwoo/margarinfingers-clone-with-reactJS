@@ -8,7 +8,6 @@ import {
   AiOutlineHeart,
   AiOutlineShopping,
 } from 'react-icons/ai';
-
 import { VscBookmark } from 'react-icons/vsc';
 
 const Container = styled.div`
@@ -18,6 +17,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   transition: all 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: 100;
   &:hover {
     background-color: white;
   }

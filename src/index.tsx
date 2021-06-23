@@ -5,6 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 // for bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.js';
+
+// import 'bootstrap/scss/bootstrap.scss';
+/* The following line can be included in a src/App.scss */
 
 ReactDOM.render(
   <React.StrictMode>
