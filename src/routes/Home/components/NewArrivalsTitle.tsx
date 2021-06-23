@@ -5,7 +5,8 @@ const ArrivalsContainer = styled.div`
   padding: 0 10px;
   margin-top: 140px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding-bottom: 50px;
 `;
 const TitleWrapper = styled.div`
@@ -23,7 +24,7 @@ const UnderLine = styled.div`
   height: 1px;
   border-bottom: 1px solid black;
 `;
-const NewArrivals = () => {
+const NewArrivalsTitle = () => {
   return (
     <ArrivalsContainer>
       <TitleWrapper>
@@ -34,4 +35,4 @@ const NewArrivals = () => {
   );
 };
 
-export default NewArrivals;
+export default NewArrivalsTitle;

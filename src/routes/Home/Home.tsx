@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel from './components/Carousel';
 import MiddleArea from './components/HomeMiddleArea';
-import NewArrivals from './components/NewArrivals';
+import NewArrivals from './components/NewArrivalsTitle';
 import styled from 'styled-components';
 
 const HomeContainer = styled.div`

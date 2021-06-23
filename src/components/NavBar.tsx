@@ -95,7 +95,11 @@ const NavBar = () => {
         </NavListWrapper>
         <IconsWrapper>
           {IconList.map((data, index) => {
-            return <IconBox>{<data.icon size="20" color="black" />}</IconBox>;
+            return (
+              <IconBox key={index}>
+                {<data.icon size="20" color="black" />}
+              </IconBox>
+            );
           })}
         </IconsWrapper>
       </NavBarWrapper>
