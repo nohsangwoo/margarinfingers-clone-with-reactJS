@@ -2,12 +2,17 @@ import React from 'react';
 import Carousel from './components/Carousel';
 import MiddleArea from './components/HomeMiddleArea';
 import NewArrivals from './components/NewArrivals';
+import styled from 'styled-components';
+
+const HomeContainer = styled.div`
+max-width`;
 const Home = () => {
   const basicUrl =
     'https://codingapple-shop.s3.ap-northeast-2.amazonaws.com/shopItem/';
   return (
-    <div>
+    <HomeContainer className="container">
       <Carousel />
+
       <MiddleArea />
 
       <NewArrivals />
@@ -43,7 +48,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </div>
+    </HomeContainer>
   );
 };
 

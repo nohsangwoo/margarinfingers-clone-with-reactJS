@@ -10,7 +10,6 @@ const MiddleContainer = styled.div`
 const AboutButtonArea = styled.div`
   width: 100%;
   height: 238px;
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,17 +20,17 @@ const AboutUsBTN = styled.button`
   height: 58px;
   background-color: white;
   font-size: 14px;
-  border: 2px solid #94c0c1;
 `;
 
 const PicturesWrapper = styled.div`
   height: 300px;
   display: flex;
-  justify-content: space-between;
-  border: 1px solid red;
+  justify-content: center;
 `;
 
-const PictureItem = styled.img``;
+const PictureItem = styled.img`
+  padding: 0 20px;
+`;
 
 const HomeMiddleArea = () => {
   return (
