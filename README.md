@@ -9,3 +9,13 @@
 ```
 import 'bootstrap/dist/css/bootstrap.min.css';
 ```
+
+# wirefrane
+
+layout for shop item (picture, title, descriptions...)
+
+# 데이터 바인딩
+
+# react-router-dom
+
+- set routes

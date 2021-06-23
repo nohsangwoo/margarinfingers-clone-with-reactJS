@@ -1,35 +1,42 @@
 import React from 'react';
 import './App.css';
-
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import Home from './routes/Home';
+import About from './routes/About';
+import Shop from './routes/Shop';
+import LookBook from './routes/LookBook';
+import Community from './routes/Community';
+import Account from './routes/Account';
 function App() {
   return (
     <div className="App">
-      <Navbar bg="light" expand="lg">
-        <Container>
-          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Link</Nav.Link>
-              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+      <HelmetProvider>
+        <Router>
+          <NavBar />
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/shop">
+              <Shop />
+            </Route>
+            <Route path="/lookbook">
+              <LookBook />
+            </Route>
+            <Route path="/community">
+              <Community />
+            </Route>
+            <Route path="/account">
+              <Account />
+            </Route>
+          </Switch>
+        </Router>
+      </HelmetProvider>
     </div>
   );
 }
