@@ -1,22 +1,16 @@
 import React from 'react';
-import { Jumbotron, Button } from 'react-bootstrap';
-import Carousel from '../components/carousel';
+import Carousel from './components/Carousel';
+import MiddleArea from './components/HomeMiddleArea';
+import NewArrivals from './components/NewArrivals';
 const Home = () => {
   const basicUrl =
     'https://codingapple-shop.s3.ap-northeast-2.amazonaws.com/shopItem/';
   return (
     <div>
       <Carousel />
-      <Jumbotron className="background">
-        <h1>20% Season Off</h1>
-        <p>
-          This is a simple hero unit, a simple jumbotron-style component for
-          calling extra attention to featured content or information.
-        </p>
-        <p>
-          <Button variant="primary">Learn more</Button>
-        </p>
-      </Jumbotron>
+      <MiddleArea />
+
+      <NewArrivals />
 
       <div className="container">
         <div className="row">

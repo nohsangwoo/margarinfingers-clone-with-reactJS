@@ -1,16 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Carousel } from 'react-bootstrap';
-import CarouselImg1 from '../asset/carousel/carousel1.jpg';
-import CarouselImg2 from '../asset/carousel/carousel2.jpg';
-import CarouselImg3 from '../asset/carousel/carousel3.jpg';
+import CarouselImg1 from '../../../asset/carousel/carousel1.jpg';
+import CarouselImg2 from '../../../asset/carousel/carousel2.jpg';
+import CarouselImg3 from '../../../asset/carousel/carousel3.jpg';
 
 const CarouselImg = styled.img`
   width: 100%;
   height: 100vh;
   object-fit: cover;
 `;
-const carousel = () => {
+const CarouselComponent = () => {
   const intervalValue = 3000;
   return (
     <Carousel fade indicators={true}>
@@ -27,4 +27,4 @@ const carousel = () => {
   );
 };
 
-export default carousel;
+export default CarouselComponent;
