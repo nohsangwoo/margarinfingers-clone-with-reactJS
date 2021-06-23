@@ -1,52 +1,105 @@
 import React from 'react';
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import styled, { keyframes } from 'styled-components';
+import MFLOGO from '../asset/logo.png';
+import {
+  AiOutlineSearch,
+  AiOutlineHeart,
+  AiOutlineShopping,
+} from 'react-icons/ai';
+
+import { VscBookmark } from 'react-icons/vsc';
+
+const Container = styled.div`
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transition: all 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+  &:hover {
+    background-color: white;
+  }
+`;
+
+const NavBarWrapper = styled.div`
+  width: 1180px;
+  display: flex;
+  /* display: grid; */
+  /* grid-template-columns: repeat(6, 1fr); */
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+`;
+
+const LogoWrapper = styled.div``;
+const LogoImg = styled.img`
+  width: 8rem;
+`;
+
+const NavListWrapper = styled.div`
+  flex: 1;
+  display: flex;
+  padding: 0 12rem;
+  justify-content: space-between;
+`;
+const NavItemWrapper = styled.div``;
+const NavLink = styled(Link)`
+  color: black;
+  text-decoration: none;
+  font-size: 0.8rem;
+`;
+
+const IconsWrapper = styled.div`
+  display: flex;
+`;
+const IconBox = styled.div`
+  &:nth-child(n + 2) {
+    padding-left: 10px;
+  }
+`;
+
 const NavBar = () => {
+  const NavList = [
+    { to: '/about', title: 'ABOUT' },
+    { to: '/shop', title: 'SHOP' },
+    { to: '/lookbook', title: 'LOOKBOOK' },
+    { to: '/community', title: 'COMMUNITY' },
+    { to: '/account', title: 'ACCOUNT' },
+  ];
+
+  const IconList = [
+    { icon: AiOutlineSearch },
+    { icon: AiOutlineHeart },
+    { icon: AiOutlineShopping },
+    { icon: VscBookmark },
+  ];
+
   return (
-    <div>
-      <Navbar bg="light" expand="lg">
-        <Container>
-          <Navbar.Brand href="#home">
-            <Link to="/">HOME</Link>
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="#ABOUT">
-                <Link to="/about">ABOUT</Link>
-              </Nav.Link>
-              <Nav.Link href="#SHOP">
-                <Link to="/shop">SHOP</Link>
-              </Nav.Link>
-              <Nav.Link href="#LOOKBOOK">
-                <Link to="/lookbook">LOOKBOOK</Link>
-              </Nav.Link>
-              <Nav.Link href="#COMMUNITY">
-                <Link to="/community">
-                  <Link to="/community">Community</Link>
-                </Link>
-              </Nav.Link>
-              <Nav.Link href="#ACCOUNT">
-                <Link to="/account">My Account</Link>
-              </Nav.Link>
-              {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown> */}
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    </div>
+    <Container>
+      <NavBarWrapper>
+        <LogoWrapper>
+          <NavLink to="/">
+            <LogoImg src={MFLOGO} />
+          </NavLink>
+        </LogoWrapper>
+        <NavListWrapper>
+          {NavList.map((navData, index) => {
+            return (
+              <NavItemWrapper key={index}>
+                <NavLink to={navData.to}>{navData.title}</NavLink>
+              </NavItemWrapper>
+            );
+          })}
+        </NavListWrapper>
+        <IconsWrapper>
+          {IconList.map((data, index) => {
+            return <IconBox>{<data.icon size="20" color="black" />}</IconBox>;
+          })}
+        </IconsWrapper>
+      </NavBarWrapper>
+    </Container>
   );
 };
 
