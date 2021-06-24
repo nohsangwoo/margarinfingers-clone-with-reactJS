@@ -4,7 +4,6 @@ import LookBookBG from '../../../asset/Background/LookbookBG.jpg';
 const LookBookContainer = styled.div`
   margin-top: 70px;
   padding: 0 10px;
-  border: 1px solid red;
   width: 100%;
 `;
 const LoobookInfoWrapper = styled.div`

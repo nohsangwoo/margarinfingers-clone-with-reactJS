@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import NewArrivalsData from '../../../fakeData/newArrival1';
 
 const PhotosContainer = styled.div`
   padding: 0 10px;
@@ -8,7 +7,6 @@ const PhotosContainer = styled.div`
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
 `;
 
 const Photo = styled.img.attrs(props => ({ src: props.src }))`
@@ -78,24 +76,44 @@ const Price = styled.div`
   width: 100%;
 `;
 
-const NewArrivalsPhotos = () => {
+type Props = {
+  NewArrivalsData: {
+    id: number;
+    title: string;
+    basicSrc: string;
+    hoverSrc: string;
+    price: number;
+  }[];
+};
+const NewArrivalsPhotos = ({ NewArrivalsData }: Props) => {
   //   console.log(NewArrivalsData);
   return (
     <PhotosContainer>
-      {NewArrivalsData.map((data, index) => {
-        return (
-          <PhotoWrapper>
-            <WrapperForHover key={index}>
-              <Photo src={data.basicSrc} alt="" />
-              <PhotoHover src={data.hoverSrc} alt="" />
-            </WrapperForHover>
-            <DescriptionWrapper>
-              <Title>{data.title}</Title>
-              <Price>{`${data.price.toLocaleString()}원`}</Price>
-            </DescriptionWrapper>
-          </PhotoWrapper>
-        );
-      })}
+      {NewArrivalsData.map(
+        (
+          data: {
+            id: number;
+            title: string;
+            basicSrc: string;
+            hoverSrc: string;
+            price: number;
+          },
+          index: number
+        ) => {
+          return (
+            <PhotoWrapper key={data.id}>
+              <WrapperForHover>
+                <Photo src={data.basicSrc} alt={data.title} />
+                <PhotoHover src={data.hoverSrc} alt={data.title} />
+              </WrapperForHover>
+              <DescriptionWrapper>
+                <Title>{data.title}</Title>
+                <Price>{`${data.price.toLocaleString()}원`}</Price>
+              </DescriptionWrapper>
+            </PhotoWrapper>
+          );
+        }
+      )}
     </PhotosContainer>
   );
 };
