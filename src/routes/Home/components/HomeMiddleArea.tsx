@@ -18,8 +18,13 @@ const AboutButtonArea = styled.div`
 const AboutUsBTN = styled.button`
   width: 164px;
   height: 58px;
+  transition: all 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
   background-color: white;
   font-size: 14px;
+  border: 2px solid #94c0c1;
+  &:hover {
+    background-color: #94c0c1;
+  }
 `;
 
 const PicturesWrapper = styled.div`

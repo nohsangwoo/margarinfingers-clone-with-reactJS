@@ -38,7 +38,7 @@ const ShowNowBTN = styled.button`
   letter-spacing: 3px;
   color: #2f2f2f;
   cursor: pointer;
-  transition-duration: 0.3s;
+  transition: all 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
   border: none;
   &:hover {
     background-color: #2f2f2f;
