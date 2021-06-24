@@ -1,7 +1,6 @@
 import React from 'react';
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import MFLOGO from '../asset/logo.png';
 import {
   AiOutlineSearch,
