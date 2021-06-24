@@ -20,7 +20,6 @@ const ContentsWrapper = styled.div``;
 
 const EachContent = styled.div<{ index: number }>`
   ${props => {
-    console.log(props.index);
     if (props.index === 0) {
       return css`
         font-size: 11px;

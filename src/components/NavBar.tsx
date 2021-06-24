@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import MFLOGO from '../asset/logo.png';
@@ -9,7 +9,7 @@ import {
 } from 'react-icons/ai';
 import { VscBookmark } from 'react-icons/vsc';
 
-const Container = styled.div`
+const Container = styled.div<{ handleNavBGWithe: boolean }>`
   position: fixed;
   top: 0;
   width: 100%;
@@ -20,6 +20,7 @@ const Container = styled.div`
   &:hover {
     background-color: white;
   }
+  background-color: ${props => (props.handleNavBGWithe ? 'white' : 'none')};
 `;
 
 const NavBarWrapper = styled.div`
@@ -60,6 +61,24 @@ const IconBox = styled.div`
 `;
 
 const NavBar = () => {
+  const [handleNavBGWithe, setHandleNavBGWithe] = useState<boolean>(false);
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      // if(window.screenY>1){
+
+      // }
+      var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+      // console.log(scrollPosition);
+      if (scrollPosition < 10) {
+        setHandleNavBGWithe(false);
+      } else {
+        setHandleNavBGWithe(true);
+      }
+    });
+    // var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+    // console.log(scrollPosition);
+  }, [handleNavBGWithe]);
+
   const NavList = [
     { to: '/about', title: 'ABOUT' },
     { to: '/shop', title: 'SHOP' },
@@ -76,7 +95,7 @@ const NavBar = () => {
   ];
 
   return (
-    <Container>
+    <Container handleNavBGWithe={handleNavBGWithe}>
       <NavBarWrapper>
         <LogoWrapper>
           <NavLink to="/">
