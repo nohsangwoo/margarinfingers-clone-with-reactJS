@@ -4,21 +4,24 @@ import MiddleArea from './components/HomeMiddleArea';
 import NewArrivals from './components/NewArrivalsTitle';
 import styled from 'styled-components';
 import NewArrivalsPhotos from './components/NewArrivalsPhotos';
+import LookBookInfo from './components/LookBookInfo';
 
-const HomeContainer = styled.div`
-max-width`;
+const HomeContainer = styled.div``;
+
+const Insidecontainer = styled.div``;
 const Home = () => {
   const basicUrl =
     'https://codingapple-shop.s3.ap-northeast-2.amazonaws.com/shopItem/';
   return (
-    <HomeContainer className="container">
+    <HomeContainer>
       <Carousel />
+      <Insidecontainer className="container">
+        <MiddleArea />
+        <NewArrivals />
+        <NewArrivalsPhotos />
+      </Insidecontainer>
 
-      <MiddleArea />
-
-      <NewArrivals />
-
-      <NewArrivalsPhotos />
+      <LookBookInfo />
 
       <div className="container">
         <div className="row">
