@@ -3,6 +3,7 @@ import Carousel from './components/Carousel';
 import MiddleArea from './components/HomeMiddleArea';
 import NewArrivals from './components/NewArrivalsTitle';
 import styled from 'styled-components';
+import NewArrivalsPhotos from './components/NewArrivalsPhotos';
 
 const HomeContainer = styled.div`
 max-width`;
@@ -16,6 +17,8 @@ const Home = () => {
       <MiddleArea />
 
       <NewArrivals />
+
+      <NewArrivalsPhotos />
 
       <div className="container">
         <div className="row">
