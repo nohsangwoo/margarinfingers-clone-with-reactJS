@@ -1,36 +1,64 @@
-# npx create-react-app "프로젝트이름" --template typescript
-
 # margarinfingers clone coding with reactJS
 
-# install react-bootstrap
+## Preview(gif wait plz..)
 
-- npm install react-bootstrap bootstrap
+![1-preview](./README_IMG/preview.gif)
+
+<hr />
+
+# Dev logs
+
+## create react app
+
+- npx create-react-app "프로젝트이름" --template typescript
+<hr />
+
+## apply react-bootstrap
+
+- npm
+
+  ```
+  npm install react-bootstrap bootstrap
+  ```
 
 - index.js에 아래 부분 임포트
 
-```
-import 'bootstrap/dist/css/bootstrap.min.css';
-```
+  ```
+  import 'bootstrap/dist/css/bootstrap.min.css';
+  ```
 
-- https://react-bootstrap.netlify.app/getting-started/introduction/
+- ref : https://react-bootstrap.netlify.app/getting-started/introduction/
 
-# wirefrane
+## set wireframe
 
-layout for shop item (picture, title, descriptions...)
+<hr />
+## 데이터 바인딩
+<hr />
 
-# 데이터 바인딩
+## apply react-router-dom
 
-# react-router-dom
+- ref : https://reactrouter.com/web/guides/quick-start
+<hr />
 
-- set routes
+## icons
 
-# 그냥 마가린 핑거스 사이트 클론
+- npm
 
-# icon 사용
+  ```
+  npm install react-icons --save
+  ```
 
-npm install react-icons --save
+- ref :
 
-- https://react-icons.github.io/react-icons/
-- https://kimyang-sun.tistory.com/entry/React-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%95%84%EC%9D%B4%EC%BD%98react-icons-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0
+  1. https://react-icons.github.io/react-icons/
+  2. https://kimyang-sun.tistory.com/entry/React-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%95%84%EC%9D%B4%EC%BD%98react-icons-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0
 
-# apply carousel trick
+<hr />
+
+## apply carousel trick
+
+<hr />
+
+## deploy by
+
+- ref : https://margarinfingers-clone.netlify.app/
